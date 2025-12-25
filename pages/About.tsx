@@ -53,7 +53,7 @@ const About: React.FC = () => {
           <section className="bg-plum p-12 md:p-20 rounded-[4rem] text-white shadow-2xl relative overflow-hidden">
              <div className="relative z-10">
                 <h3 className="text-xs font-black uppercase tracking-widest mb-12 opacity-60">Published Works</h3>
-                <h4 className="text-5xl md:text-6xl font-serif italic mb-10 leading-[0.9]">"You Are the Genius. <br/> AI Is Just a Tool"</h4>
+                <h4 className="text-5xl md:text-6xl font-serif italic mb-10 leading-[0.9]">Protect Your Genius: <br/> Using AI Without Diluting Your Voice</h4>
                 <p className="text-xl font-light opacity-80 mb-12 max-w-lg">
                   Writing helps me see patterns. This book is a guide to staying grounded in your voice in a tech-heavy world.
                 </p>
