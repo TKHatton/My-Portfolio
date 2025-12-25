@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-[90] py-6 px-6 md:px-12 flex justify-between items-center pointer-events-none">
+      <nav className="absolute top-0 left-0 w-full z-[90] py-6 px-6 md:px-12 flex justify-between items-center pointer-events-none">
         <div className="flex items-center pointer-events-auto">
           <Link 
             to="/" 

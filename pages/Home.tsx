@@ -73,8 +73,7 @@ const Home: React.FC = () => {
                     controls
                     poster="/images/Rose.png"
                   >
-                    <source src="/videos/intro.mp4" type="video/mp4" />
-                    <source src="/videos/intro.webm" type="video/webm" />
+                    <source src="/videos/hero-video.webm" type="video/webm" />
                     Your browser does not support the video tag.
                   </video>
                 </div>
