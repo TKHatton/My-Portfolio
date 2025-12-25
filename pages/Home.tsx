@@ -51,26 +51,21 @@ const Home: React.FC = () => {
 
       <ScrollSection className="bg-sage/5">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div>
-              <span className="text-xs font-black uppercase tracking-[0.5em] text-charcoal/30 mb-6 block">Meet Lenise</span>
-              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-12">
-                Creating <br/> with <span className="font-serif italic lowercase font-normal normal-case text-plum">purpose.</span>
-              </h2>
-              <p className="text-xl md:text-2xl font-light text-charcoal/70 leading-relaxed mb-12">
-                I build tools that help people think clearly, learn deeply, and create with confidence. Watch to learn more about my approach.
-              </p>
-              <Link to="/about" className="px-12 py-5 bg-charcoal text-cream rounded-full text-xs font-black uppercase tracking-widest hover:bg-plum hover:scale-105 transition-all inline-block shadow-2xl">
-                Learn More About Me
-              </Link>
-            </div>
+          <div className="mb-16">
+            <span className="text-xs font-black uppercase tracking-[0.5em] text-plum/60 mb-4 block">Meet Lenise</span>
+          </div>
 
-            <div className="relative">
-              <div className="relative bg-charcoal p-4 md:p-6 rounded-[3rem] shadow-2xl overflow-hidden border-[8px] md:border-[12px] border-charcoal">
-                <div className="relative rounded-[2rem] overflow-hidden bg-cream aspect-video">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            {/* Video on Left */}
+            <div className="relative order-2 lg:order-1">
+              <div className="relative bg-charcoal p-6 md:p-8 rounded-[4rem] shadow-[0_30px_80px_rgba(0,0,0,0.3)] overflow-hidden border-[16px] md:border-[20px] border-charcoal group hover:border-plum transition-all duration-500">
+                <div className="relative rounded-[3rem] overflow-hidden bg-black aspect-video">
                   <video
                     className="w-full h-full object-cover"
-                    controls
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                     poster="/images/Rose.png"
                   >
                     <source src="/videos/hero-video.webm" type="video/webm" />
@@ -78,12 +73,25 @@ const Home: React.FC = () => {
                   </video>
                 </div>
                 {/* Video Label Tag */}
-                <div className="absolute top-8 right-8 bg-plum text-white text-xs font-black px-4 py-2 rounded-full uppercase tracking-widest shadow-lg">
-                  Introduction
+                <div className="absolute top-10 right-10 bg-coral text-white text-xs font-black px-5 py-3 rounded-full uppercase tracking-widest shadow-2xl group-hover:scale-110 transition-transform">
+                  👋 Introduction
                 </div>
               </div>
-              {/* Subtle glow effect */}
-              <div className="absolute -inset-4 bg-plum/10 blur-[100px] rounded-full -z-10"></div>
+              {/* Enhanced glow effect */}
+              <div className="absolute -inset-8 bg-plum/20 blur-[120px] rounded-full -z-10 animate-pulse"></div>
+            </div>
+
+            {/* Text on Right */}
+            <div className="order-1 lg:order-2">
+              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-12">
+                Creating <br/> with <span className="font-serif italic lowercase font-normal normal-case text-plum">purpose.</span>
+              </h2>
+              <p className="text-xl md:text-2xl font-light text-charcoal/70 leading-relaxed mb-12">
+                I build tools that help people think clearly, learn deeply, and create with confidence. Watch the video to learn more about my approach.
+              </p>
+              <Link to="/about" className="px-12 py-5 bg-charcoal text-cream rounded-full text-xs font-black uppercase tracking-widest hover:bg-plum hover:scale-105 transition-all inline-block shadow-2xl">
+                Learn More About Me
+              </Link>
             </div>
           </div>
         </div>
