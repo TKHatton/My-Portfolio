@@ -20,14 +20,14 @@ const Home: React.FC = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 1 }}
-            className="text-[12vw] md:text-[15vw] font-black uppercase leading-[0.75] tracking-tighter text-charcoal mb-12 mix-blend-multiply"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black uppercase leading-[0.75] tracking-tighter text-charcoal mb-12 mix-blend-multiply"
           >
             Creative <br/>
             <span className="text-plum italic font-serif lowercase font-normal normal-case ml-[10vw]">Technologist</span>
           </motion.h1>
           
           <div className="absolute top-0 right-0 hidden lg:block">
-            <span className="vertical-text text-[10px] font-black uppercase tracking-[1em] text-charcoal/20 select-none">
+            <span className="vertical-text text-xs font-black uppercase tracking-[1em] text-charcoal/20 select-none">
               LENISE KENNEY • EST. 19XX • STUDIO LAB
             </span>
           </div>

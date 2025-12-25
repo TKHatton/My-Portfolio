@@ -8,7 +8,7 @@ const Courses: React.FC = () => {
     <div className="pt-40 pb-32 px-6 md:px-12 max-w-7xl mx-auto">
       <header className="mb-40 grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
         <div>
-          <h1 className="text-8xl md:text-[12vw] font-black uppercase leading-[0.7] tracking-tighter mb-12 text-charcoal">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black uppercase leading-[0.7] tracking-tighter mb-12 text-charcoal">
             Human <br/> <span className="text-sage italic font-serif lowercase font-normal normal-case">Learning</span>
           </h1>
           <p className="text-2xl md:text-3xl font-light text-charcoal/60 leading-tight">
@@ -28,7 +28,7 @@ const Courses: React.FC = () => {
             whileHover={{ backgroundColor: "rgba(255, 122, 92, 0.05)" }}
             className="bg-cream p-12 md:p-20 group transition-all"
           >
-            <span className="text-[10px] font-black text-plum mb-12 block tracking-[0.5em] uppercase">Module 0{i + 1}</span>
+            <span className="text-xs font-black text-plum mb-12 block tracking-[0.5em] uppercase">Module 0{i + 1}</span>
             <h3 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-charcoal mb-8 group-hover:text-coral transition-colors">
               {course.title}
             </h3>
@@ -36,8 +36,8 @@ const Courses: React.FC = () => {
               {course.description}
             </p>
             <div className="flex gap-4">
-               <span className="text-[10px] font-black uppercase px-4 py-2 border border-charcoal/10 rounded-full">Interactive</span>
-               <span className="text-[10px] font-black uppercase px-4 py-2 border border-charcoal/10 rounded-full">60 Minutes</span>
+               <span className="text-xs font-black uppercase px-4 py-2 border border-charcoal/10 rounded-full">Interactive</span>
+               <span className="text-xs font-black uppercase px-4 py-2 border border-charcoal/10 rounded-full">60 Minutes</span>
             </div>
           </motion.div>
         ))}

@@ -59,28 +59,28 @@ const App: React.FC = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-16">
               <div className="space-y-4">
-                <h4 className="text-[10px] font-black uppercase tracking-widest opacity-30">Menu</h4>
-                <div className="flex flex-col gap-2 uppercase text-[10px] font-black tracking-widest">
+                <h4 className="text-xs font-black uppercase tracking-widest opacity-30">Menu</h4>
+                <div className="flex flex-col gap-2 uppercase text-xs font-black tracking-widest">
                   <Link to="/about" className="hover:text-coral transition-colors">About</Link>
                   <Link to="/works" className="hover:text-coral transition-colors">Works</Link>
                   <Link to="/learning" className="hover:text-coral transition-colors">Learning</Link>
                 </div>
               </div>
               <div className="space-y-4">
-                <h4 className="text-[10px] font-black uppercase tracking-widest opacity-30">Connect</h4>
-                <div className="flex flex-col gap-2 uppercase text-[10px] font-black tracking-widest">
+                <h4 className="text-xs font-black uppercase tracking-widest opacity-30">Connect</h4>
+                <div className="flex flex-col gap-2 uppercase text-xs font-black tracking-widest">
                   <a href="#" className="hover:text-plum transition-colors">LinkedIn</a>
                   <a href="#" className="hover:text-plum transition-colors">Newsletter</a>
                 </div>
               </div>
               <div className="space-y-4">
-                 <h4 className="text-[10px] font-black uppercase tracking-widest opacity-30">Location</h4>
-                 <p className="text-[10px] font-black uppercase tracking-widest">Digital Native • Planet Earth</p>
+                 <h4 className="text-xs font-black uppercase tracking-widest opacity-30">Location</h4>
+                 <p className="text-xs font-black uppercase tracking-widest">Digital Native • Planet Earth</p>
               </div>
             </div>
           </div>
           
-          <div className="mt-24 pt-12 border-t border-charcoal/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] font-black uppercase tracking-[0.4em] opacity-20">
+          <div className="mt-24 pt-12 border-t border-charcoal/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-black uppercase tracking-[0.4em] opacity-20">
              <p>© {new Date().getFullYear()} Lenise Kenney Studio</p>
              <p>Built with intention and soul</p>
           </div>
@@ -95,7 +95,7 @@ const App: React.FC = () => {
         >
           <Link to="/wip" className="bg-charcoal text-cream px-6 py-4 rounded-full flex items-center gap-4 shadow-[0_20px_50px_rgba(0,0,0,0.3)] pointer-events-auto hover:bg-black hover:scale-105 transition-all group border border-white/10">
              <div className="w-2 h-2 bg-sage rounded-full animate-pulse group-hover:bg-white"></div>
-             <span className="text-[10px] font-black uppercase tracking-widest leading-none">Join the Beta</span>
+             <span className="text-xs font-black uppercase tracking-widest leading-none">Join the Beta</span>
           </Link>
         </motion.div>
       </div>

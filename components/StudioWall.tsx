@@ -17,9 +17,20 @@ const StudioWall: React.FC = () => {
           >
             {/* Tape Effect */}
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-8 bg-sage/30 backdrop-blur-sm rotate-2 z-20"></div>
-            
-            <div className="mb-8 flex justify-between items-start">
-              <span className="text-[10px] font-black uppercase tracking-widest text-plum/60">{item.status}</span>
+
+            {/* Thumbnail Image */}
+            {item.image && (
+              <div className="mb-6 -mx-8 -mt-8 h-48 overflow-hidden">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+            )}
+
+            <div className={`mb-8 flex justify-between items-start ${item.image ? 'mt-8' : ''}`}>
+              <span className="text-xs font-black uppercase tracking-widest text-plum/60">{item.status}</span>
               <span className="text-xs font-serif italic text-charcoal/20">#{idx + 1}</span>
             </div>
 
@@ -31,16 +42,23 @@ const StudioWall: React.FC = () => {
             <div className="border-t border-charcoal/5 pt-6 mt-auto">
               <div className="flex items-center gap-2 mb-4">
                  <div className="h-1 flex-1 bg-charcoal/5 rounded-full overflow-hidden">
-                    <motion.div 
+                    <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: idx === 0 ? '40%' : '75%' }}
                       className="h-full bg-coral"
                     />
                  </div>
-                 <span className="text-[10px] font-black">{idx === 0 ? '40%' : '75%'}</span>
+                 <span className="text-xs font-black">{idx === 0 ? '40%' : '75%'}</span>
               </div>
-              <button className="text-[10px] font-black uppercase tracking-widest border-b-2 border-charcoal pb-1 hover:text-coral hover:border-coral transition-colors">
-                Request Access
+              <button
+                onClick={() => {
+                  if (item.url) {
+                    window.open(item.url, '_blank');
+                  }
+                }}
+                className="text-xs font-black uppercase tracking-widest border-b-2 border-charcoal pb-1 hover:text-coral hover:border-coral transition-colors"
+              >
+                {item.url ? 'Visit App' : 'Request Access'}
               </button>
             </div>
 

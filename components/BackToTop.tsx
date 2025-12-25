@@ -45,7 +45,7 @@ const BackToTop: React.FC = () => {
           >
             ↑
           </motion.span>
-          <span className="text-[7px] font-black uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity -mt-1">
+          <span className="text-xs font-black uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity -mt-1">
             Top
           </span>
         </motion.button>

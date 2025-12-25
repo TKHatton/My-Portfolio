@@ -17,7 +17,7 @@ const About: React.FC = () => {
     <div className="pt-40 pb-24 px-6 md:px-12 max-w-7xl mx-auto overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
         <div className="lg:sticky lg:top-40 h-fit">
-           <h1 className="text-[10vw] font-black uppercase leading-[0.75] tracking-tighter text-charcoal mb-12">
+           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.75] tracking-tighter text-charcoal mb-12">
              Inside <br/> the <span className="text-coral italic font-serif lowercase font-normal normal-case">Mind</span>
            </h1>
            <div className="aspect-square relative group">
@@ -32,7 +32,7 @@ const About: React.FC = () => {
 
         <div className="space-y-48 pt-20">
           <section>
-            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-plum mb-10 block">The Narrative</span>
+            <span className="text-xs font-black uppercase tracking-[0.5em] text-plum mb-10 block">The Narrative</span>
             <p className="text-4xl md:text-5xl font-light leading-[1.1] text-charcoal mb-12">
               I experiment. I learn in <span className="text-sage font-serif italic">public</span>. I build things that start small and grow over time.
             </p>
@@ -63,7 +63,7 @@ const About: React.FC = () => {
           </section>
 
           <section>
-             <h2 className="text-[10px] font-black uppercase tracking-[0.5em] text-charcoal/30 mb-12 block">The Art Series</h2>
+             <h2 className="text-xs font-black uppercase tracking-[0.5em] text-charcoal/30 mb-12 block">The Art Series</h2>
              <div className="space-y-24">
                 <div className="group">
                    <h3 className="text-4xl font-black uppercase mb-4 group-hover:text-coral transition-colors">Metamorphosis</h3>

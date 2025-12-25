@@ -6,10 +6,10 @@ const WIP: React.FC = () => {
   return (
     <div className="pt-40 pb-32 px-6 md:px-12 max-w-7xl mx-auto">
       <header className="mb-32 text-center">
-        <div className="inline-block px-4 py-1 bg-sage/20 rounded-full text-[10px] font-black uppercase tracking-[0.3em] text-charcoal mb-8">
+        <div className="inline-block px-4 py-1 bg-sage/20 rounded-full text-xs font-black uppercase tracking-[0.3em] text-charcoal mb-8">
            Live Lab • Experimental
         </div>
-        <h1 className="text-8xl md:text-[14vw] font-black uppercase leading-[0.7] tracking-tighter mb-12 text-charcoal">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black uppercase leading-[0.7] tracking-tighter mb-12 text-charcoal">
           Studio <br/> <span className="text-coral italic font-serif lowercase font-normal normal-case">Wall</span>
         </h1>
         <p className="text-2xl md:text-3xl font-light text-charcoal/60 max-w-3xl mx-auto">

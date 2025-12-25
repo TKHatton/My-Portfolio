@@ -12,7 +12,7 @@ const Works: React.FC = () => {
   return (
     <div className="pt-40 px-6 md:px-12 pb-32 max-w-7xl mx-auto">
       <header className="mb-32">
-        <h1 className="text-7xl md:text-[10vw] font-black uppercase leading-[0.8] tracking-tighter mb-10 text-charcoal">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.8] tracking-tighter mb-10 text-charcoal">
           Selected <br/> <span className="text-plum italic font-serif lowercase font-normal normal-case">Works</span>
         </h1>
         <div className="h-1 w-24 bg-coral mb-10"></div>
@@ -26,17 +26,23 @@ const Works: React.FC = () => {
           <motion.div
             key={work.id}
             layoutId={work.id}
-            onClick={() => setSelectedWork(work)}
+            onClick={() => {
+              if (work.url) {
+                window.open(work.url, '_blank');
+              } else {
+                setSelectedWork(work);
+              }
+            }}
             className="group cursor-pointer"
           >
             <div className="aspect-[3/4] overflow-hidden rounded-[2.5rem] mb-8 bg-sage/10 relative shadow-xl group-hover:shadow-charcoal/10 transition-shadow">
-              <img 
-                src={work.image} 
-                alt={work.title} 
+              <img
+                src={work.image}
+                alt={work.title}
                 className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2 filter saturate-[0.2] group-hover:saturate-100"
               />
-              <div className="absolute top-6 right-6 px-4 py-2 bg-white/90 backdrop-blur text-[10px] font-black uppercase tracking-widest rounded-full text-charcoal opacity-0 group-hover:opacity-100 transition-opacity">
-                View Project
+              <div className="absolute top-6 right-6 px-4 py-2 bg-white/90 backdrop-blur text-xs font-black uppercase tracking-widest rounded-full text-charcoal opacity-0 group-hover:opacity-100 transition-opacity">
+                {work.url ? 'Visit App' : 'View Project'}
               </div>
             </div>
             <div className="space-y-2">

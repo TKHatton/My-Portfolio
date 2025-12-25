@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
     <div className="pt-40 px-6 md:px-12 max-w-7xl mx-auto pb-32">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
         <div>
-          <h1 className="text-8xl md:text-[10vw] font-black uppercase leading-[0.75] tracking-tighter mb-16 text-charcoal">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.75] tracking-tighter mb-16 text-charcoal">
             Say <br/> <span className="text-plum italic font-serif lowercase font-normal normal-case">Hello</span>
           </h1>
           <p className="text-3xl font-light leading-snug text-charcoal/80 mb-16">
@@ -36,15 +36,15 @@ const Contact: React.FC = () => {
           <h3 className="text-3xl font-black uppercase mb-12 text-charcoal">Start a project</h3>
           <form className="space-y-10">
             <div className="group space-y-2">
-              <label className="text-[10px] font-black uppercase tracking-[0.3em] text-charcoal/30 group-focus-within:text-plum transition-colors">Your Name</label>
+              <label className="text-xs font-black uppercase tracking-[0.3em] text-charcoal/30 group-focus-within:text-plum transition-colors">Your Name</label>
               <input type="text" className="w-full bg-transparent border-b-2 border-charcoal/10 py-4 focus:border-plum transition-all outline-none text-xl font-medium" placeholder="Jane Doe" />
             </div>
             <div className="group space-y-2">
-              <label className="text-[10px] font-black uppercase tracking-[0.3em] text-charcoal/30 group-focus-within:text-plum transition-colors">Email Address</label>
+              <label className="text-xs font-black uppercase tracking-[0.3em] text-charcoal/30 group-focus-within:text-plum transition-colors">Email Address</label>
               <input type="email" className="w-full bg-transparent border-b-2 border-charcoal/10 py-4 focus:border-plum transition-all outline-none text-xl font-medium" placeholder="jane@example.com" />
             </div>
             <div className="group space-y-2">
-              <label className="text-[10px] font-black uppercase tracking-[0.3em] text-charcoal/30 group-focus-within:text-plum transition-colors">The Problem or Goal</label>
+              <label className="text-xs font-black uppercase tracking-[0.3em] text-charcoal/30 group-focus-within:text-plum transition-colors">The Problem or Goal</label>
               <textarea rows={4} className="w-full bg-transparent border-b-2 border-charcoal/10 py-4 focus:border-plum transition-all outline-none resize-none text-xl font-medium" placeholder="Tell me what you're building..."></textarea>
             </div>
             <button className="w-full py-6 bg-plum text-white font-black uppercase tracking-[0.25em] rounded-full hover:bg-coral hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 shadow-xl shadow-plum/20">

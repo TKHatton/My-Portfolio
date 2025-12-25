@@ -7,6 +7,7 @@ export interface WorkItem {
   image: string;
   fullStory?: string;
   meaning?: string;
+  url?: string;
 }
 
 export interface WIPItem {
@@ -14,6 +15,8 @@ export interface WIPItem {
   title: string;
   description: string;
   status: string;
+  image?: string;
+  url?: string;
 }
 
 export interface Course {

@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
           {/* Work With Me Button - Persistent Charcoal Style */}
           <Link
             to="/contact"
-            className="hidden sm:block px-8 py-3.5 bg-charcoal text-cream text-[10px] uppercase font-black tracking-[0.25em] rounded-full hover:bg-black hover:scale-105 transition-all shadow-xl"
+            className="hidden sm:block px-8 py-3.5 bg-charcoal text-cream text-xs uppercase font-black tracking-[0.25em] rounded-full hover:bg-black hover:scale-105 transition-all shadow-xl"
           >
             Work With Me
           </Link>
@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
             className="fixed inset-0 z-[85] bg-cream flex flex-col justify-center px-10"
           >
             <div className="space-y-8">
-              <span className="text-[10px] font-black uppercase tracking-[0.5em] text-plum/40 block">Explore the Lab</span>
+              <span className="text-xs font-black uppercase tracking-[0.5em] text-plum/40 block">Explore the Lab</span>
               <div className="flex flex-col gap-6">
                 {navLinks.map((link) => (
                   <Link
