@@ -4,8 +4,17 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ScrollSection from '../components/ScrollSection';
 import KineticIntro from '../components/KineticIntro';
-import AppLabFrame from '../components/AppLabFrame';
-import { APP_WORKS } from '../constants';
+import FlashingImages from '../components/FlashingImages';
+
+const FLASH_IMAGES = [
+  '/images/colorful skulls at night.png',
+  '/images/bliss on swing 1.png',
+  '/images/Lady Flower Window3.png',
+  '/images/Whitney Houston.1.png',
+  '/images/Rose.png',
+  '/images/Clowns at the ball.png',
+  '/images/toddler in garden.png',
+];
 
 const Home: React.FC = () => {
   const [introFinished, setIntroFinished] = useState(false);
@@ -53,21 +62,28 @@ const Home: React.FC = () => {
 
       <ScrollSection className="bg-sage/5">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-24">
-            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-charcoal/30 mb-4 block">The Mission</span>
-            <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-12">Building <br/> for <span className="font-serif italic lowercase font-normal normal-case text-sage">focus.</span></h2>
-          </div>
-          
-          <div className="space-y-40">
-            {APP_WORKS.slice(0, 2).map((app, i) => (
-              <AppLabFrame 
-                key={app.id}
-                title={app.title}
-                description={app.description}
-                purpose={i === 0 ? "Built to reduce overwhelm." : "Built to clarify communication."}
-                image={app.image}
-              />
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div>
+              <span className="text-xs font-black uppercase tracking-[0.5em] text-charcoal/30 mb-6 block">Visual Stories</span>
+              <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-none mb-12">
+                Creating <br/> through <span className="font-serif italic lowercase font-normal normal-case text-plum">feeling.</span>
+              </h2>
+              <p className="text-xl md:text-2xl font-light text-charcoal/70 leading-relaxed mb-12">
+                Art as exploration. Each piece holds a moment, a memory, or a question I needed to answer visually.
+              </p>
+              <Link to="/works" className="px-12 py-5 bg-charcoal text-cream rounded-full text-xs font-black uppercase tracking-widest hover:bg-coral hover:scale-105 transition-all inline-block shadow-2xl">
+                View All Works
+              </Link>
+            </div>
+
+            <div className="relative aspect-square">
+              <FlashingImages images={FLASH_IMAGES} interval={150} />
+              <div className="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur text-charcoal p-8 rounded-3xl max-w-[240px] shadow-2xl hidden md:block border border-charcoal/5">
+                <p className="text-xs font-serif italic leading-relaxed">
+                  "Each image tells a story. Watch them shift and breathe."
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </ScrollSection>
