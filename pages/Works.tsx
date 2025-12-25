@@ -7,7 +7,35 @@ import { WorkItem } from '../types';
 const Works: React.FC = () => {
   const [selectedWork, setSelectedWork] = useState<WorkItem | null>(null);
 
-  const allWorks = [...ART_WORKS, ...APP_WORKS];
+  const renderWorkCard = (work: WorkItem) => (
+    <motion.div
+      key={work.id}
+      layoutId={work.id}
+      onClick={() => {
+        if (work.url) {
+          window.open(work.url, '_blank');
+        } else {
+          setSelectedWork(work);
+        }
+      }}
+      className="group cursor-pointer"
+    >
+      <div className="aspect-[3/4] overflow-hidden rounded-[2.5rem] mb-8 bg-sage/10 relative shadow-xl group-hover:shadow-charcoal/10 transition-shadow">
+        <img
+          src={work.image}
+          alt={work.title}
+          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2 filter saturate-[0.2] group-hover:saturate-100"
+        />
+        <div className="absolute top-6 right-6 px-4 py-2 bg-white/90 backdrop-blur text-xs font-black uppercase tracking-widest rounded-full text-charcoal opacity-0 group-hover:opacity-100 transition-opacity">
+          {work.url ? 'Visit App' : 'View Project'}
+        </div>
+      </div>
+      <div className="space-y-2">
+        <h3 className="text-3xl font-bold uppercase tracking-tight text-charcoal group-hover:text-plum transition-colors">{work.title}</h3>
+        <p className="text-xs uppercase tracking-[0.3em] text-coral font-black italic">{work.category}</p>
+      </div>
+    </motion.div>
+  );
 
   return (
     <div className="pt-40 px-6 md:px-12 pb-32 max-w-7xl mx-auto">
@@ -21,37 +49,49 @@ const Works: React.FC = () => {
         </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
-        {allWorks.map((work) => (
-          <motion.div
-            key={work.id}
-            layoutId={work.id}
-            onClick={() => {
-              if (work.url) {
-                window.open(work.url, '_blank');
-              } else {
-                setSelectedWork(work);
-              }
-            }}
-            className="group cursor-pointer"
-          >
-            <div className="aspect-[3/4] overflow-hidden rounded-[2.5rem] mb-8 bg-sage/10 relative shadow-xl group-hover:shadow-charcoal/10 transition-shadow">
-              <img
-                src={work.image}
-                alt={work.title}
-                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2 filter saturate-[0.2] group-hover:saturate-100"
-              />
-              <div className="absolute top-6 right-6 px-4 py-2 bg-white/90 backdrop-blur text-xs font-black uppercase tracking-widest rounded-full text-charcoal opacity-0 group-hover:opacity-100 transition-opacity">
-                {work.url ? 'Visit App' : 'View Project'}
-              </div>
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-3xl font-bold uppercase tracking-tight text-charcoal group-hover:text-plum transition-colors">{work.title}</h3>
-              <p className="text-xs uppercase tracking-[0.3em] text-coral font-black italic">{work.category}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+      {/* Websites Section */}
+      <section className="mb-32">
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-charcoal mb-4">
+            Websites
+          </h2>
+          <div className="h-0.5 w-16 bg-sage"></div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+          {/* Website items will be added here */}
+          <div className="aspect-[3/4] flex items-center justify-center rounded-[2.5rem] bg-charcoal/5 border-2 border-dashed border-charcoal/20">
+            <p className="text-charcoal/40 font-black uppercase text-sm tracking-wider">Coming Soon</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Apps Section */}
+      <section className="mb-32">
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-charcoal mb-4">
+            Apps
+          </h2>
+          <div className="h-0.5 w-16 bg-plum"></div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+          {APP_WORKS.map((work) => renderWorkCard(work))}
+        </div>
+      </section>
+
+      {/* Art Section */}
+      <section>
+        <div className="mb-16">
+          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight text-charcoal mb-4">
+            Art
+          </h2>
+          <div className="h-0.5 w-16 bg-coral"></div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
+          {ART_WORKS.map((work) => (
+            renderWorkCard(work)
+          ))}
+        </div>
+      </section>
 
       <AnimatePresence>
         {selectedWork && (
