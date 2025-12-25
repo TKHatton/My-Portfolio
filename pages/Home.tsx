@@ -58,8 +58,8 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             {/* Video on Left */}
             <div className="relative order-2 lg:order-1">
-              <div className="relative bg-charcoal p-6 md:p-8 rounded-[4rem] shadow-[0_30px_80px_rgba(0,0,0,0.3)] overflow-hidden border-[16px] md:border-[20px] border-charcoal group hover:border-plum transition-all duration-500">
-                <div className="relative rounded-[3rem] overflow-hidden bg-black aspect-video">
+              <div className="relative bg-charcoal p-3 md:p-4 rounded-[3rem] shadow-[0_30px_80px_rgba(0,0,0,0.3)] overflow-hidden border-[8px] border-charcoal group hover:border-plum transition-all duration-500">
+                <div className="relative rounded-[2rem] overflow-hidden bg-black aspect-video">
                   <video
                     className="w-full h-full object-cover"
                     autoPlay
@@ -71,10 +71,6 @@ const Home: React.FC = () => {
                     <source src="/videos/hero-video.webm" type="video/webm" />
                     Your browser does not support the video tag.
                   </video>
-                </div>
-                {/* Video Label Tag */}
-                <div className="absolute top-10 right-10 bg-coral text-white text-xs font-black px-5 py-3 rounded-full uppercase tracking-widest shadow-2xl group-hover:scale-110 transition-transform">
-                  👋 Introduction
                 </div>
               </div>
               {/* Enhanced glow effect */}
