@@ -5,11 +5,13 @@ import FlashingImages from '../components/FlashingImages';
 import ScrollSection from '../components/ScrollSection';
 
 const FLASH_IMAGES = [
-  'https://picsum.photos/seed/story1/1000/1000',
-  'https://picsum.photos/seed/story2/1000/1000',
-  'https://picsum.photos/seed/story3/1000/1000',
-  'https://picsum.photos/seed/story4/1000/1000',
-  'https://picsum.photos/seed/story5/1000/1000',
+  '/images/2 black women at bonfire.png',
+  '/images/bliss on swing 1.png',
+  '/images/Lady Flower Window3.png',
+  '/images/Pleasure Mania 1.png',
+  '/images/Whitney Houston.1.png',
+  '/images/white locs.png',
+  '/images/toddler in garden.png',
 ];
 
 const About: React.FC = () => {
